@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter} from 'react-router-dom'
-
+import './index.css'
 import App from './App'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route exact path="/" component={App} />
+    </Switch>
+  </Router>,
   document.getElementById('root'),
 )
